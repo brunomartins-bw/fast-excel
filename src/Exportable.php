@@ -3,7 +3,7 @@
 namespace Rap2hpoutre\FastExcel;
 
 use Box\Spout\Writer\Style\Style;
-use Box\Spout\Writer\WriterFactory;
+use Box\Spout\Writer\Common\WriterEntityFactory;
 use Generator;
 use Illuminate\Support\Collection;
 use InvalidArgumentException;
@@ -90,7 +90,7 @@ trait Exportable
      */
     private function exportOrDownload($path, $function, callable $callback = null)
     {
-        $writer = WriterFactory::create($this->getType($path));
+        $writer = WriterEntityFactory::create($this->getType($path));
         $this->setOptions($writer);
         /* @var \Box\Spout\Writer\WriterInterface $writer */
         $writer->$function($path);
