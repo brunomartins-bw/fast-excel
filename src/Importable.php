@@ -2,7 +2,7 @@
 
 namespace Rap2hpoutre\FastExcel;
 
-use Box\Spout\Reader\ReaderFactory;
+use Box\Spout\Reader\Common\ReaderEntityFactory;
 use Box\Spout\Reader\SheetInterface;
 use Illuminate\Support\Collection;
 
@@ -90,7 +90,7 @@ trait Importable
      */
     private function reader($path)
     {
-        $reader = ReaderFactory::create($this->getType($path));
+        $reader = ReaderEntityFactory::createReaderFromFile($path);
         $this->setOptions($reader);
         /* @var \Box\Spout\Reader\ReaderInterface $reader */
         $reader->open($path);
