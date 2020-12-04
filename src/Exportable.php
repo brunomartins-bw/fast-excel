@@ -183,10 +183,11 @@ trait Exportable
         }
 
         $keys = array_keys(is_array($first_row) ? $first_row : $first_row->toArray());
+
         if ($this->header_style) {
-            $writer->addRowWithStyle($keys, $this->header_style);
+            $writer->createRowFromArray($keys, $this->header_style);
         } else {
-            $writer->addRow($keys);
+            $writer->createRowFromArray($keys);
         }
     }
 
