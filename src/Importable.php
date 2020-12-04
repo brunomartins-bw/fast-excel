@@ -2,7 +2,7 @@
 
 namespace Rap2hpoutre\FastExcel;
 
-use Box\Spout\Reader\Common\ReaderEntityFactory;
+use Box\Spout\Reader\Common\Creator\ReaderEntityFactory;
 use Box\Spout\Reader\SheetInterface;
 use Illuminate\Support\Collection;
 

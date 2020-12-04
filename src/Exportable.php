@@ -3,7 +3,7 @@
 namespace Rap2hpoutre\FastExcel;
 
 use Box\Spout\Writer\Style\Style;
-use Box\Spout\Writer\Common\WriterEntityFactory;
+use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
 use Generator;
 use Illuminate\Support\Collection;
 use InvalidArgumentException;
