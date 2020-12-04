@@ -130,6 +130,8 @@ trait Exportable
         }
         // Prepare collection (i.e remove non-string)
         $this->prepareCollection($collection);
+
+        dd($collection);
         // Add header row.
         if ($this->with_header) {
             $this->writeHeader($writer, $collection->first());
