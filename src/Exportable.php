@@ -90,7 +90,7 @@ trait Exportable
      */
     private function exportOrDownload($path, $function, callable $callback = null)
     {
-        $writer = WriterEntityFactory::create($this->getType($path));
+        $writer = WriterEntityFactory::createWriterFromFile($path);
         $this->setOptions($writer);
         /* @var \Box\Spout\Writer\WriterInterface $writer */
         $writer->$function($path);
